@@ -7,11 +7,12 @@ inputs.forEach((input, i) => {
 		// If the input has a value (user typed a digit)
 		if(this.value.length >= 1) {
 			// Ensure only the first character is kept (if user inputs more)
+			//console.log(this.value);
 			this.value = this.value[this.value.length - 1];
 			// Move focus to the next input if it exists
-			if(i < inputs.length-1) {
-				inputs[i+1].focus();
-			}
+			setTimeout(() => {
+	            inputs[i+1].focus();
+	        }, 0);
 		}
 		/*
 		// If the input is cleared, move focus back to the previous input
