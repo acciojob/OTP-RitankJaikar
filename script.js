@@ -10,9 +10,11 @@ inputs.forEach((input, i) => {
 			//console.log(this.value);
 			this.value = this.value[this.value.length - 1];
 			// Move focus to the next input if it exists
-			setTimeout(() => {
-	            inputs[i+1].focus();
-	        }, 10);
+			if(i < inputs.length-1) {
+		        setTimeout(() => {
+		            inputs[i+1].focus();
+		        }, 10);
+			}
 		}
 		/*
 		// If the input is cleared, move focus back to the previous input
