@@ -12,7 +12,7 @@ inputs.forEach((input, i) => {
 			// Move focus to the next input if it exists
 			if(i < inputs.length-1) {
 		        setTimeout(() => {
-		            inputs[i+1].focus();
+		            inputs[i+1].click();
 		        }, 100);
 			}
 		}
