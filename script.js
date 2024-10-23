@@ -1,4 +1,25 @@
 //your JS code here. If required.
+
+const codeInputs = document.querySelectorAll('.code');
+ 
+codeInputs.forEach((input, index) => {
+    input.addEventListener('keyup', (e) => {
+        if (e.target.value.length === 1 && index<codeInputs.length - 1) {
+            codeInputs[index + 1].focus();
+        }
+    });
+ 
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && index>0 && e.target.value.length === 0) {
+            codeInputs[index - 1].focus();
+            codeInputs[index - 1].select();
+        }
+    });
+});
+ 
+document.getElementById('code-1').focus();
+
+/*
 const inputs= document.querySelectorAll(".code");
 
 inputs.forEach((input, i) => {
@@ -16,12 +37,11 @@ inputs.forEach((input, i) => {
 		        }, 100);
 			}
 		}
-		/*
+		
 		// If the input is cleared, move focus back to the previous input
-		if(input.value.length === 0 && i>0) {
-			inputs[i-1].focus();
-		}
-		*/
+		//if(input.value.length === 0 && i>0) {
+		//	inputs[i-1].focus();
+		//}
 	});
 
 	// Add event listener for keydown event
@@ -37,5 +57,6 @@ inputs.forEach((input, i) => {
         }
 	})
 })
+*/
 
 
