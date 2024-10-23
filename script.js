@@ -13,7 +13,7 @@ inputs.forEach((input, i) => {
 			if(i < inputs.length-1) {
 		        setTimeout(() => {
 		            inputs[i+1].focus();
-		        }, 10);
+		        }, 100);
 			}
 		}
 		/*
