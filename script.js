@@ -5,10 +5,10 @@ inputs.forEach((input, i) => {
 	// Add an event listener for the 'input' event
 	input.addEventListener("input", function() {
 		// If the input has a value (user typed a digit)
-		if(this.value.length >= 1) {
+		if(input.value.length >= 1) {
 			// Ensure only the first character is kept (if user inputs more)
-			//console.log(this.value);
-			this.value = this.value[this.value.length - 1];
+			//console.log(input.value);
+			input.value = input.value[input.value.length - 1];
 			// Move focus to the next input if it exists
 			if(i < inputs.length-1) {
 		        setTimeout(() => {
@@ -18,7 +18,7 @@ inputs.forEach((input, i) => {
 		}
 		/*
 		// If the input is cleared, move focus back to the previous input
-		if(this.value.length === 0 && i>0) {
+		if(input.value.length === 0 && i>0) {
 			inputs[i-1].focus();
 		}
 		*/
