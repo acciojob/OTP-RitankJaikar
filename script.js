@@ -12,7 +12,7 @@ inputs.forEach((input, i) => {
 			// Move focus to the next input if it exists
 			setTimeout(() => {
 	            inputs[i+1].focus();
-	        }, 0);
+	        }, 10);
 		}
 		/*
 		// If the input is cleared, move focus back to the previous input
