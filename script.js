@@ -7,16 +7,18 @@ inputs.forEach((input, i) => {
 		// If the input has a value (user typed a digit)
 		if(this.value.length >= 1) {
 			// Ensure only the first character is kept (if user inputs more)
-			this.value = this.value.slice(0, 1);
+			this.value = this.value[this.value.length - 1];
 			// Move focus to the next input if it exists
 			if(i < inputs.length-1) {
 				inputs[i+1].focus();
 			}
 		}
+		/*
 		// If the input is cleared, move focus back to the previous input
 		if(this.value.length === 0 && i>0) {
 			inputs[i-1].focus();
 		}
+		*/
 	});
 
 	// Add event listener for keydown event
